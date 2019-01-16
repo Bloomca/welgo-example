@@ -1,0 +1,23 @@
+{
+  "name": "welgo-example",
+  "version": "1.0.0",
+  "description": "Example Node application using welgo library",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bloomca/welgo-example.git"
+  },
+  "keywords": [
+    "welgo",
+    "node"
+  ],
+  "author": "Seva Zaikov <seva.zaikov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bloomca/welgo-example/issues"
+  },
+  "homepage": "https://github.com/Bloomca/welgo-example#readme"
+}
