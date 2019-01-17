@@ -1,6 +1,8 @@
 const express = require("express");
 const { render } = require("welgo");
+
 const Stories = require("./components/stories");
+const NotFound = require("./components/notFound");
 
 const api = require("./utils/api");
 const html = require("./utils/html");
@@ -14,6 +16,16 @@ app.get("/", async (req, res) => {
     `,
     api
   );
+  res.send(page);
+});
+
+app.get("*", async (req, res) => {
+  const page = await render(
+    html`
+      <${NotFound} />
+    `
+  );
+
   res.send(page);
 });
 
