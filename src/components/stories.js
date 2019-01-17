@@ -1,6 +1,7 @@
+const Welgo = require("welgo");
 const html = require("../utils/html");
 
-const PAGE_SIZE = 30;
+const PAGE_SIZE = 10;
 
 module.exports = async ({ page = 1 }, { getStories }) => {
   const stories = await getStories();
@@ -18,12 +19,13 @@ module.exports = async ({ page = 1 }, { getStories }) => {
   const nextURL = `/?page=${Number(page) + 1}`;
 
   return html`
-    <div>
+    <${Welgo.Fragment}>
+      <h1>New Hackernews Stories</h1>
       <ul>
         ${storiesMarkup}
       </ul>
       <a href="${nextURL}">More</a>
-    </div>
+    <//>
   `;
 };
 
