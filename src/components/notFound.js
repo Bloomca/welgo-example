@@ -1,9 +1,9 @@
-const Welgo = require("welgo");
+const Page = require("./page");
 const html = require("../utils/html");
 
 module.exports = function NotFoundPage() {
   return html`
-    <${Welgo.Fragment}>
+    <${Page}>
       <h1>Not Found!</h1>
       <p>
         Sorry, page you were looking for does not exist. You can go to the main
