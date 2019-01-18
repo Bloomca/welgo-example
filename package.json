@@ -24,7 +24,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "htm": "^2.0.0",
-    "welgo": "^0.2.0"
+    "welgo": "^0.5.0"
   },
   "devDependencies": {
     "eslint": "^5.12.0",
