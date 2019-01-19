@@ -20,6 +20,7 @@ app.get("/", async (req, res) => {
 });
 
 app.get("*", async (req, res) => {
+  res.statusCode = 404;
   const page = await render(
     html`
       <${NotFound} />
