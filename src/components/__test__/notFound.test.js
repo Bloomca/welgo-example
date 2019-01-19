@@ -1,10 +1,10 @@
 const html = require("../../utils/html");
 const NotFound = require("../notFound");
 
-const { mount } = require("weltest");
+const { shallow } = require("weltest");
 
 test("<NotFound /> should have a link to the main page", async () => {
-  const wrapper = await mount(
+  const wrapper = await shallow(
     html`
       <${NotFound} />
     `
