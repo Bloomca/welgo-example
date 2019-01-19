@@ -1,5 +1,6 @@
 const Page = require("./page");
 const html = require("../utils/html");
+const Story = require("./storyItem");
 
 const PAGE_SIZE = 10;
 
@@ -28,13 +29,3 @@ module.exports = async ({ page = 1 }, { getStories }) => {
     <//>
   `;
 };
-
-async function Story({ id }, { getStory }) {
-  const story = await getStory(id);
-
-  if (story) {
-    return html`
-      <li>${story.title}</li>
-    `;
-  }
-}
